@@ -1,35 +1,39 @@
-# 🛡️ E-Commerce Transaction & Operational Risk Analytics Pipeline
+# Dual-Platform E-Commerce Revenue & Governance Analytics System
 
-## 📊 Business Context & Objective
-In e-commerce platforms, malicious chargebacks (Fraud Risk) and aggressive policy exploitation (Return Risk) act as hidden profit margin killers. This project establishes a robust data engineering and analytics pipeline using **Python (Pandas)** and **SQL (SQLite)** to audit 12,000 historical order transactions, validate third-party threat intelligence, and deploy an automated risk-mitigation rule matrix.
+## 📌 Executive Summary
+This enterprise-grade business intelligence solution provides senior management with a two-tier visibility framework into e-commerce operations, financial health, and automated risk governance. 
 
----
-
-## 🔍 Key Engineering & Analytical Milestones
-
-### 1. Relational Database Schema Architecture
-* Designed and provisioned an idempotent SQLite database pipeline (`ecommerce_analytics.db`).
-* Enforced structural data integrity constraints, including explicit data types and an immutable `PRIMARY KEY` on `order_id` to prevent record duplication.
-
-### 2. Digital Channel Fraud Risk Auditing
-* Evaluated transaction vulnerabilities across combinations of hardware form factors and marketing channels.
-* Identified **Mobile + Paid Ads** as the platform's highest threat vector, demonstrating a **6.34% baseline fraud rate**.
-
-### 3. Threat Intelligence Verification (`high_risk_ip`)
-* Audited a binary flag from a simulated third-party IP risk network before integrating it into production logic.
-* Proved that transactions from flagged IPs carried an **18.11% fraud conversion rate**—nearly **6x riskier** than standard connections.
-
-### 4. Automated Governance Rule Engine Matrix
-Constructed a multi-layered SQL conditional `CASE WHEN` engine to dynamically route checkout requests into four operational action tiers:
-* 🟢 **PASS**: Low-risk profiles cleared for frictionless fulfillment (72.15% of portfolio volume).
-* 🟡 **MFA_CHALLENGE**: Suspicious vectors (e.g., Paid Ads with clean IPs) stepped up to Multi-Factor Authentication to mitigate risk while minimizing good customer friction (20.02% share).
-* 🔴 **IMMEDIATE_BLOCK**: Hard intercept on high-probability fraud, protecting up to **€37,862.16** in inventory capital and chargeback fines (5.22% share).
-* 📋 **LOGISTICS_AUDIT**: Flags high-value `Return Risk` profiles over long distances to protect fulfillment logistics margins (2.60% share).
+Organizations face a constant balancing act between maximizing transactional throughput and mitigating risk. This project establishes a streamlined, interactive framework to monitor macro-level revenue health while enabling operational teams to perform surgical drill-downs into risk vectors across distinct technical channels.
 
 ---
 
-## 🛠️ Tech Stack & Environment
-* **Language:** Python 3.9
-* **Libraries:** Pandas, SQLite3
-* **Environment:** JupyterLab Sandbox
-* **SQL Concepts utilized:** Common Table Expressions (CTEs), Subqueries, Multi-conditional `CASE WHEN` logic, Precise Aggregations (`SUM`, `COUNT`, `AVG`).
+## 🛠️ System Architecture & Visual Design Framework
+The portfolio is intentionally structured into a **Two-Tier Analytical Funnel** across the industry's leading BI applications (**Tableau** and **Power BI**). This ensures platform agility and provides immediate "Time-to-Insight" for diverse corporate audiences.
+
+### 1. The Strategic Layer (Dashboard Page 1: Revenue & Governance Overview)
+* **Target Audience:** C-Suite and Executive Leadership.
+* **Objective:** Monitor macro operational health and geographical revenue concentration.
+* **Core Components:**
+  * **Governance Actions Overview:** A clean donut chart layout acting as a baseline health check. It isolates system performance metrics, proving an optimal 97.67% transaction `PASS` rate alongside a tightly managed 0.80% `IMMEDIATE_BLOCK` rate.
+  * **Regional Revenue & Risk Breakdown:** A sorted horizontal bar matrix tracking total revenue across international markets (led by the Netherlands at €200,050). Each market bar is dynamically stacked with automated system responses, visually pinning risk concentrations to specific revenue streams.
+
+### 2. The Operational Layer (Dashboard Page 2: Device Traffic & Behavioral Risk Analysis)
+* **Target Audience:** Operations, Product Teams, and Risk Analysts.
+* **Objective:** Tactical drill-down to isolate platform-specific behavior and identify underlying risk vectors ("The *Why* Layer").
+* **Core Components:**
+  * **Device Traffic & Risk Analysis:** A descending horizontal stacked bar chart structuring transaction volumes across active hardware formats. It immediately highlights that while **Mobile** drives the bulk of corporate transaction traffic (over 7,100 passing orders), it simultaneously scales as our primary risk vector, capturing the highest concentration of `MFA_CHALLENGE` interventions and `IMMEDIATE_BLOCK` actions.
+
+---
+
+## 📂 Repository Structure
+* `/Tableau`: Contains the fully packaged workbook (`.twbx`) utilizing advanced dashboard containers, customized sheet swapping, and standardized formatting rules.
+* `/PowerBI`: *[In Development]* Re-engineering the primary business data model, implementing custom DAX metrics, and utilizing Power Query/M for clean transformation pipelines.
+* `/documentation_images`: High-resolution visual captures of the active analytics assets for immediate review.
+
+---
+
+## 📈 Technical Skillsets Demonstrated
+* **Dashboard Architecture:** Designing structured, responsive layout grids using automatic scaling to avoid visual clutter.
+* **Information Hierarchy:** Organizing complex relational tables into structured levels of summary and detail sheets.
+* **Data Storytelling:** Translating multi-dimensional data models into clean, gray-axis corporate designs optimized for rapid executive decision-making.
+
